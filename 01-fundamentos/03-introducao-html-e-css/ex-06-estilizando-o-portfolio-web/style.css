@@ -1,0 +1,13 @@
+body {
+  background-color: #F5FFFA;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  border: 5px solid #B0E0E6;
+  border-radius: 10px;
+}
+
+.description {
+  font-family: 'Times New Roman', Times, serif;
+}
