@@ -61,6 +61,8 @@ for (let i = 0; i < h3TypeTitles.length; i += 1) {
 }
 
 // 12 - Remova a section criada no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+main.removeChild(leftSection);
+
 // 13 - Centralize a section criada no passo 6 (aquele que possui a classe right-content).
 // De olho na dica 👀:: Para centralizar a section, basta configurar o margin-right: auto da section;
 
