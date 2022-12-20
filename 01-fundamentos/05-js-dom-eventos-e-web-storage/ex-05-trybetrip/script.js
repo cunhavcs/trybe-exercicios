@@ -5,6 +5,10 @@ h1.innerText = 'TrybeTrip - Agência de Viagens';
 body.appendChild(h1);
 
 // 02 - Adicione a tag main com a classe main-content como filho da tag body;
+const main = document.createElement('main');
+main.classList.add('main-content');
+body.appendChild(main);
+
 // 03 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
 // 04 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
 // 05 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
