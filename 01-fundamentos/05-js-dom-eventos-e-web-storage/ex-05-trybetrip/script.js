@@ -36,6 +36,15 @@ img.classList.add('small-image');
 leftSection.appendChild(img);
 
 // 08 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+const ul = document.createElement('ul');
+const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+for (let i = 0; i < numbers.length; i+= 1) {
+  const li = document.createElement('li');
+  li.innerText = numbers[i];
+  ul.appendChild(li);
+}
+rightSection.appendChild(ul);
+
 // 09 - Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
 
 // Adicione a classe title na tag h1 criada;
