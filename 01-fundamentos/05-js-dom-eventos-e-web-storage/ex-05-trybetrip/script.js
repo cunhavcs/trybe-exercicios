@@ -15,6 +15,10 @@ centerSection.classList.add('center-content');
 main.appendChild(centerSection);
 
 // 04 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+const p = document.createElement('p');
+p.innerText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit accusantium labore iure facere blanditiis maiores voluptatum eum harum beatae expedita, sed tempore temporibus dolorem neque delectus. Blanditiis commodi rerum facilis.';
+centerSection.appendChild(p);
+
 // 05 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
 // 06 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
 // 07 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
