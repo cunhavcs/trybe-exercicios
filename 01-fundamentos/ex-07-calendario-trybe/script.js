@@ -118,3 +118,14 @@ const createListeners = () => {
 };
 
 createListeners();
+
+// PARTE 07
+const createTask = (task) => {
+  const myTasks = document.querySelector('.my-tasks');
+  const newTask = document.createElement('span');
+
+  newTask.innerText = task;
+  myTasks.appendChild(newTask);
+};
+
+createTask(' - Projeto Calendário');
