@@ -107,6 +107,19 @@ const zoomOut = ({ target }) => {
   target.style.fontSize = '20px';
 };
 
+// PARTE 10
+const changeColor = ({ target }) => {
+  const selectedColor = subtitleTask.style.backgroundColor;
+
+  if (subtitleTask.className.includes('selected')) {
+    if (target.style.color === selectedColor) {
+      target.style.color = 'rgb(119,119,119)';
+    } else {
+      target.style.color = selectedColor;
+    }
+  }
+};
+
 const createListeners = () => {
   const decemberDays = document.querySelectorAll('.day');
 
@@ -114,6 +127,7 @@ const createListeners = () => {
     const currentDay = decemberDays[i];
     currentDay.addEventListener('mouseover', zoomIn);
     currentDay.addEventListener('mouseout', zoomOut);
+    currentDay.addEventListener('click', changeColor);
   }
 };
 
@@ -153,3 +167,7 @@ const selectTask = ({ target }) => {
 
 const subtitleTask = document.querySelector('.task');
 subtitleTask.addEventListener('click', selectTask);
+
+
+
+
