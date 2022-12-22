@@ -97,3 +97,24 @@ const changeText = () => {
 
 const fridayButton = document.querySelector('#btn-friday');
 fridayButton.addEventListener('click', changeText);
+
+// PARTE 06
+const zoomIn = ({ target }) => {
+  target.style.fontSize = '25px';
+};
+
+const zoomOut = ({ target }) => {
+  target.style.fontSize = '20px';
+};
+
+const createListeners = () => {
+  const decemberDays = document.querySelectorAll('.day');
+
+  for (let i = 0; i < decemberDays.length; i += 1) {
+    const currentDay = decemberDays[i];
+    currentDay.addEventListener('mouseover', zoomIn);
+    currentDay.addEventListener('mouseout', zoomOut);
+  }
+};
+
+createListeners();
