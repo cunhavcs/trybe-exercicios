@@ -78,3 +78,22 @@ const createFridayButton = (string) => {
 };
 
 createFridayButton('Sexta-feira');
+
+// PARTE 05
+const changeText = () => {
+  const fridays = document.querySelectorAll('.friday');
+  const fridaysArray = [4, 11, 18, 25]
+
+  for (let i = 0; i < fridays.length; i += 1) {
+    const currentFriday = fridays[i];
+
+    if (currentFriday.innerText === 'SEXTOU!') {
+      currentFriday.innerText = fridaysArray[i];
+    } else {
+      currentFriday.innerText = 'SEXTOU!';
+    }
+  }
+};
+
+const fridayButton = document.querySelector('#btn-friday');
+fridayButton.addEventListener('click', changeText);
