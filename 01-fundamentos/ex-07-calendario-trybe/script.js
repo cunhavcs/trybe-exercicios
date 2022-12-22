@@ -66,3 +66,15 @@ const changeBackgroundColor = () => {
 
 const holidayButton = document.querySelector('#btn-holiday');
 holidayButton.addEventListener('click', changeBackgroundColor);
+
+// PARTE 04
+const createFridayButton = (string) => {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  const fridayButton = document.createElement('button');
+  
+  fridayButton.innerText = string;
+  fridayButton.id = 'btn-friday';
+  buttonsContainer.appendChild(fridayButton);
+};
+
+createFridayButton('Sexta-feira');
