@@ -49,3 +49,20 @@ const createHolidayButton = (string) => {
 };
 
 createHolidayButton('Feriados');
+
+// PARTE 03
+const changeBackgroundColor = () => {
+  const holidays = document.querySelectorAll('.holiday');
+
+  for (let i = 0; i < holidays.length; i += 1) {
+    const currentHoliday = holidays[i];
+    if (currentHoliday.style.backgroundColor === 'white') {
+      currentHoliday.style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+      currentHoliday.style.backgroundColor = 'white';
+    }
+  }
+};
+
+const holidayButton = document.querySelector('#btn-holiday');
+holidayButton.addEventListener('click', changeBackgroundColor);
