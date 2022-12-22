@@ -129,3 +129,15 @@ const createTask = (task) => {
 };
 
 createTask(' - Projeto Calendário');
+
+// PARTE 08
+const createSubtitle = (color) => {
+  const myTasks = document.querySelector('.my-tasks');
+  const subtitle = document.createElement('div');
+
+  subtitle.classList.add('task');
+  subtitle.style.backgroundColor = color;
+  myTasks.appendChild(subtitle);
+};
+
+createSubtitle('green');
