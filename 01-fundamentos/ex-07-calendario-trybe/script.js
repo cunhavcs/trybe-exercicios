@@ -141,3 +141,15 @@ const createSubtitle = (color) => {
 };
 
 createSubtitle('green');
+
+// PARTE 09
+const selectTask = ({ target }) => {
+  if (target.className.includes('selected')) {
+    target.classList.remove('selected'); 
+  } else {
+    target.classList.add('selected');
+  }
+};
+
+const subtitleTask = document.querySelector('.task');
+subtitleTask.addEventListener('click', selectTask);
