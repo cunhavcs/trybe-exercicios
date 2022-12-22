@@ -168,6 +168,43 @@ const selectTask = ({ target }) => {
 const subtitleTask = document.querySelector('.task');
 subtitleTask.addEventListener('click', selectTask);
 
+// BONUS
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto “COMPROMISSOS”, adiciona o item à lista “MEUS COMPROMISSOS” ao clicar no botão “ADICIONAR”;
+// Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em “ADICIONAR”;
+// Ao pressionar a tecla “enter” o evento também deverá ser disparado.
+// De olho na dica 👀: Você pode utilizar a propriedade key.
 
+const createAppointmentWithClick = ({ key }) => {
+  const taskListContainer = document.querySelector('.task-list-container');
+  const input = document.querySelector('#task-input');
+  const newAppointment = document.createElement('li');
 
+  if (input.value === '') {
+    alert('ERRO: É obrigatório digitar um texto para adicionar');
+  } else {
+    newAppointment.innerText = input.value;
+    newAppointment.style.listStyleType = 'none';
+    taskListContainer.appendChild(newAppointment);
+    input.value = '';
+  }
+};
 
+const createAppointmentWithEnter = ({ key }) => {
+  const taskListContainer = document.querySelector('.task-list-container');
+  const newAppointment = document.createElement('li');
+
+  if (input.value === '') {
+    alert('ERRO: É obrigatório digitar um texto para adicionar');
+  } else if (key === 'Enter') {
+    newAppointment.innerText = input.value;
+    newAppointment.style.listStyleType = 'none';
+    taskListContainer.appendChild(newAppointment);
+    input.value = '';
+  }
+};
+
+const addAppointmentButton = document.querySelector('#btn-add');
+addAppointmentButton.addEventListener('click', createAppointmentWithClick);
+
+const input = document.querySelector('#task-input');
+input.addEventListener('keyup', createAppointmentWithEnter);
