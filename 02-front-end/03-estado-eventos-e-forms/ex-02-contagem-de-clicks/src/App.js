@@ -6,10 +6,12 @@ class App extends React.Component {
     clicks: 0,
   }
 
+  getButtonColor = (num) => (num % 2 === 0) ? 'green' : 'yellow';
+
   handleClick = () => {
     this.setState((prevState) => ({
       clicks: prevState.clicks + 1,
-    }))
+    }));
   };
   
   render() {
@@ -19,6 +21,7 @@ class App extends React.Component {
         <button
           type="button"
           onClick={ this.handleClick }
+          style={ { backgroundColor: this.getButtonColor(this.state.clicks) } }
         >
           Botão
         </button>
