@@ -1,22 +1,20 @@
-import React from "react";
+import { Component } from 'react';
 
-class About extends React.Component {
+class About extends Component {
   render() {
-    const myName = 'Vinicius Cunha';
-    const aboutMe = 'Estudante de desenvolvimento web full stack na Trybe (Turma 27 A).';
-    const skillsTitle = 'Minhas Habilidade';
+    const name = 'Vinicius Cunha';
+    const aboutMe = 'Aluno de desenvolvimento web na Trybe (Turma 27A)';
 
-    return(
+    return (
       <div>
-        <h1>{myName}</h1>
-        <p>{aboutMe}</p>
-        <h2>{skillsTitle}</h2>
+        <h1>{ name }</h1>
+        <p>{ aboutMe }</p>
+        <h2>Minhas Habilidades</h2>
         <ul>
-          <li>HTML e CSS;</li>
-          <li>Git e GitHub;</li>
-          <li>JavaScript Vanilla;</li>
-          <li>Testes Unitários com Jest;</li>
-          <li>React (Básico).</li>
+          <li>Git e GitHub</li>
+          <li>HTML e CSS</li>
+          <li>JavaScript Vanilla</li>
+          <li>React</li>
         </ul>
       </div>
     );
