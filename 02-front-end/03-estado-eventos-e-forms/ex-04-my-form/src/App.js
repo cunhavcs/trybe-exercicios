@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import About from './About';
 
 class App extends Component {
   state = {
@@ -19,7 +20,7 @@ class App extends Component {
   };
 
   render() {
-    const { userName, email, skills, about, isStudent } = this.state;
+    const { userName, email, skills, isStudent } = this.state;
 
     return (
       <div>
@@ -67,17 +68,7 @@ class App extends Component {
           </label>
           <br />
           <br />
-          <label htmlFor='about'>
-            Escreva um resumo sobre você:
-            <br />
-            <textarea
-             id='about'
-             rows='4'
-             cols='50'
-             onChange={ this.handleChange }
-             value={ about }
-            />
-          </label>
+          <About handleChange={ this.handleChange } />
           <br />
           <br />
           <label htmlFor='isStudent'>
